@@ -20,46 +20,89 @@
                     <p>A</p>
                     <p>M</p>
                 </div>
-                <input type="text" class="search_box_mobile" id="" placeholder="enter location">
+                <div class="search_box_mob">
+                    <input type="text" class="search_box_mobile" id="search_area_mob" placeholder="enter location">
+                    <button class="submit_mob" id="mob_submit_btn"><img src="images/icons8-search-25.png" alt="" class="submit_icon"></button>
+                    <p class="enter_correct" id="error_mob">please enter correct location</p>
+                </div>
             </div>
         </section>
         <section class="mid_sec">
             <div class="search_bar">
-                <button class="submit_search" id="submit_btn"><img src="icons8-search-25.png" alt=""></button>
+                <button class="submit_search" id="submit_btn"><img src="images/icons8-search-25.png" alt=""></button>
                 <input type="text" class="search_box" id="search_area" placeholder="enter location">
+                <p class="enter_correct_" id="error">please enter correct location</p>
             </div>
             <div class="temp_container">
                 <div class="name_value">
-                    <p class="temp_data" id="city_name">Jaipur, <span class="country_name" id="count_name">IN</span></p>
-                    <p class="temp_data" id="temp">21*</p>
+                    <div class="details_city">
+                        <p class="temp_data" id="city_name"></p>
+                        <p class="state_name" id="state"></p>
+                        <p class="country_name" id="country"></p>
+                    </div>
+                    <p class="temp_data" id="temp"></p>
                 </div>
                 <div class="temp_icon">
                     <img src="" alt="icon" class="current_temp_icon" id="temp_icon">
+                    <p id="icon_desc"></p>
                 </div>
             </div> 
             <div class="base2">
                 <div class="today_forecast">
                     <div class="today_tag">
-                        <p class="forecast_text">TODAYS FORECAST</p>
+                        <p class="forecast_text">TODAYS HIGHLIGHT'S</p>
                     </div>
                     <div class="today_data">
-                        <p>mrng</p>
-                        <p>noon</p>
-                        <p>evng</p>
-                        <p>night</p>
+                        <div class="today_data_values">
+                            <p>Sunrise</p>
+                            <p id="sunrise"></p>
+                        </div>
+                        <div class="today_data_values">
+                            <p>Sunset</p>
+                            <p id="sunset"></p>
+                        </div>
+                        <div class="today_data_values">
+                            <p>Humidity</p>
+                            <p id="humidity"></p>
+                        </div>
+                        <div class="today_data_values">
+                            <p>Visibility</p>
+                            <p id="visibility"></p>
+                        </div>
                     </div>
                 </div>
                 <div class="air_condition">
                     <div class="air_tag">
-                        <p class="forecast_text">AIR CONDITION</p>
+                        <p class="forecast_text">TODAY'S FORECAST</p>
                     </div>
                     <div class="air_data">
                         <div class="col">
-                            <p>real feel</p>
-                            <p>chance of rain</p>
+                            <p>12 AM</p>
+                            <p id="1"></p>
                         </div>
                         <div class="col">
-                            <p>Wind</p>
+                            <p>3 AM</p>
+                            <p id="2"></p>
+                        </div>
+                        <div class="col">
+                            <p>6 AM</p>
+                            <p id="3"></p>
+                        </div>
+                        <div class="col">
+                            <p>9 AM</p>
+                            <p id="4"></p>
+                        </div>
+                        <div class="col">
+                            <p>12 PM</p>
+                            <p id="5"></p>
+                        </div>
+                        <div class="col">
+                            <p>3 PM</p>
+                            <p id="6"></p>
+                        </div>
+                        <div class="col">
+                            <p>6 PM</p>
+                            <p id="7"></p>
                         </div>
                     </div>
                 </div>
@@ -67,29 +110,48 @@
         </section>
         <section class="right_sec">
             <div class="7day_tag">
-                <p class="forecast_text">7-DAY FORECAST</p>
+                <p class="forecast_text">4-DAY FORECAST</p>
             </div>
             <div class="weekly_data">
-                <div class="day1">
-                    1
+                <div class="days">
+                    <div class="d_fr">
+                        <img src="" alt="" id="day1_img">
+                        <p id="day1_temp"></p>
+                    </div>
+                    <p id="day1_time"></p>
+                    <p class="temp_desc_fr5" id="day1_desc"></p>
                 </div>
-                <div class="day2">
-                    2
+                <div class="days">
+                    <div class="d_fr">
+                        <img src="" alt="" id="day2_img">
+                        <p id="day2_temp"></p>
+                    </div>
+                    <p id="day2_time"></p>
+                    <p class="temp_desc_fr5" id="day2_desc"></p>
                 </div>
-                <div class="day3">
-                    3
+                <div class="days">
+                    <div class="d_fr">
+                        <img src="" alt="" id="day3_img">
+                        <p id="day3_temp"></p>
+                    </div>
+                    <p id="day3_time"></p>
+                    <p class="temp_desc_fr5" id="day3_desc"></p>
                 </div>
-                <div class="day4">
-                    4
+                <div class="days">
+                    <div class="d_fr">
+                        <img src="" alt="" id="day4_img">
+                        <p id="day4_temp"></p>
+                    </div>
+                    <p id="day4_time"></p>
+                    <p class="temp_desc_fr5" id="day4_desc"></p>
                 </div>
-                <div class="day5">
-                    5
-                </div>
-                <div class="day6">
-                    6
-                </div>
-                <div class="day7">
-                    7
+                <div class="days">
+                    <div class="d_fr">
+                        <img src="" alt="" id="day5_img">
+                        <p id="day5_temp"></p>
+                    </div>
+                    <p id="day5_time"></p>
+                    <p class="temp_desc_fr5" id="day5_desc"></p>
                 </div>
             </div>
         </section>
