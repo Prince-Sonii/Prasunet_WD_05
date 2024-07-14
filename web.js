@@ -20,7 +20,7 @@ const displayLocation = async (position)=>{
     let long = await position.coords.longitude;
     let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`)
     let data = await response.json();
-    let r1 = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${data.name}&limit=1&appid=${apiKey}`);
+    let r1 = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${data.name}&limit=1&appid=${apiKey}`);
     let state = await r1.json();
     displayCityName.innerText = data.name+",";
     displayStateName.innerText = state[0].state+", "; 
@@ -93,14 +93,14 @@ submitButton.addEventListener("click",()=>{
     }
 })
 const displayData = async (cityName)=>{
-    let r1 = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`);
+    let r1 = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`);
     let coords = await r1.json();
     let name = coords[0].name;
     let country = coords[0].country;
     let latitude = coords[0].lat;
     let longitude = coords[0].lon;
     displayCityName.innerText = name+",";
-    let s1 = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=1&appid=${apiKey}`);
+    let s1 = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=1&appid=${apiKey}`);
     let state = await s1.json();
     displayStateName.innerText = state[0].state+", "; 
     displayCountryName.textContent = country;
