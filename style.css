@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     color: #ffffff;
-}
+} 
 body {
     background-color: #020723;
 }
@@ -22,16 +22,40 @@ body {
 .ver_logo {
     display: none;
 }
+.search_box_mob {
+    display: flex;
+    align-items: center;
+    gap: .2vw;
+}
+.submit_mob {
+    padding: 1vw 1vw;
+    background-color: #1f262e;
+    border: none;
+    outline: none;
+    border-radius: 0px 7px 7px 0px;
+}
+.submit_icon {
+    width: 2vw;
+}
 .search_box_mobile {
     padding: 1vw 1vw;
     background-color: #1f262e;
     border: none;
     outline: none;
-    border-radius: 7px;
+    border-radius: 7px 0px 0px 7px;
     color: #ffffff;
 }
 ::placeholder {
     color: #ffffff;
+}
+.enter_correct {
+    position: absolute;
+    top: 9%;
+    font-size: .5rem;
+    background-color: #1f262e;
+    padding: .2vw .4vw;
+    border-radius: 7px;
+    display:none;
 }
 .mid_sec {
     display: flex;
@@ -53,8 +77,24 @@ body {
     display: flex;
     flex-direction: column;
     gap: 4vw;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
+}
+.details_city {
+    display: flex;
+    align-items: flex-end;
+    gap: .3vw;
+}
+.state_name {
+    font-size:1rem;
+}
+.country_name {
+    font-size: .8rem;
+}
+.temp_icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .base2 {
     display: flex;
@@ -65,7 +105,7 @@ body {
     padding: 3vh 2vh;
     display: flex;
     flex-direction: column;
-    gap: 4vw;
+    gap: 2vw;
     background-color: #1f262e;
     border-radius: 7px;
 }
@@ -79,6 +119,12 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.today_data_values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
 .air_condition {
     padding: 3vh 2vh;
     display: flex;
@@ -91,9 +137,14 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+.row {
+    display: flex;
+    justify-content: space-between;
+}
 .col {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2vw;
     font-size: .9rem;
     font-weight: 500;
@@ -110,6 +161,21 @@ body {
     display: flex;
     flex-direction: column;
     gap: 3vh;
+}
+.days {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.d_fr {
+    display: flex;
+    gap: .5vw;
+    align-items: center;
+}
+.temp_desc_fr5 {
+    display: flex; 
+    flex-wrap:wrap; 
+    /* width: 12vw; */
 }
 @media (min-width:1024px) {
     .container {
@@ -136,7 +202,7 @@ body {
         border-radius: 7px;
         background-color: #1f262e;
     }
-    .search_box_mobile {
+    .search_box_mob {
         display: none;
     }
     .mid_sec {
@@ -171,6 +237,14 @@ body {
         background-color: #1f262e;
         width: 100%;
     }
+    .enter_correct_ {
+        position: absolute;
+        top: 11%;
+        padding: .4vw .4vw;
+        background-color: #1f262e;
+        border-radius: 7px;
+        display: none;
+    }
     ::placeholder {
         font-size: 1.2rem;
     } 
@@ -181,6 +255,9 @@ body {
     .name_value {
         font-size:2rem;   
     }
+    .state_name {
+        font-size: 1.5rem;
+    }
     .country_name {
         font-size: 1.2rem;
     }
@@ -188,13 +265,14 @@ body {
         font-size: 1.3rem;
     }
     .today_data {
+        font-size: 1.15rem;
         justify-content: space-around;
     }
     .air_data {
         justify-content: space-around;
     }
     .col {
-        font-size: 1rem;
+        font-size: 1.15rem;
     }
     .right_sec {
         width: 25vw;
@@ -204,5 +282,14 @@ body {
         padding: 0vw 1vw;
         justify-content: space-around;
     }
-
+    .days {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .d_fr {
+        gap: 1vw;
+    }
+    .temp_desc_fr5 {
+        /* width: 3vw; */
+    }
 }
